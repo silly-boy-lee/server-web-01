@@ -9,7 +9,25 @@
   <url>http://maven.apache.org</url>
 
 
+  <properties>
+    <!--spring核心包 版本号-->
+    <spring.version>4.3.7.RELEASE</spring.version>
+    <!---->
+
+  </properties>
+
+
+
   <dependencies>
+
+    <!--spring 核心包-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
