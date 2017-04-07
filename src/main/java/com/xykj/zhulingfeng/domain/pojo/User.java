@@ -13,6 +13,8 @@ public class User {
 
     private String password;
 
+    private String demo;
+
     public String getUserId() {
         return userId;
     }
