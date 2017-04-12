@@ -1,4 +1,4 @@
-package com.xykj.zhulingfeng.domain.pojo;
+package com.xykj.manage.domain.pojo;
 
 /**
  * Created by mr.lee on 2017/4/7.
