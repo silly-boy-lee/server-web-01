@@ -37,7 +37,7 @@
         <slf4j.version>1.7.7</slf4j.version>
         <!-- log4j日志文件管理包 版本号 -->
         <log4j.version>1.2.17</log4j.version>
-        <!--jstl标签类dadas包 版本号-->
+        <!--jstl标签类包 版本号-->
         <jstl.version>1.2</jstl.version>
         <!--jackson版本号-->
         <jackson.version>2.7.1</jackson.version>
