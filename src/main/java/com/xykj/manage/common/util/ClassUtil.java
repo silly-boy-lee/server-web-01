@@ -1,4 +1,4 @@
-package com.cmsg.util;
+package com.xykj.manage.common.util;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -13,26 +13,20 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- * 
- * 
+ * @ClassName: ClassUtil
+ * @description: 类操作工具类
+ * @modifyDate: 2017/4/14 + 下午1:58
+ * @author: mr.lee
  */
-/**
- * ClassName: ClassUtil <br/>
- * Function: 类相关的工具类 <br/>
- * date: 2016年9月20日 下午5:27:10 <br/>
- * 
- * @author Mr.Lee
- * @version
- */
+@SuppressWarnings("unused")
 public class ClassUtil {
 
 	/**
-	 * getClasses: 从包package中获取所有的Class. <br/>
-	 * 
-	 * @author Mr.Lee
-	 * @param pack
-	 *            包名
-	 * @return 指定包下所有的class
+	 * @MethodName: getClasses
+	 * @description: 从包package中获取所有的Class
+	 * @modifyDate: 2017/4/14 + 下午1:59
+	 * @author: mr.lee
+	 * @param
 	 */
 	public static Set<Class<?>> getClasses(Package pack) {
 
@@ -125,16 +119,17 @@ public class ClassUtil {
 		return classes;
 	}
 
-	 
-	/** 
-	 * findAndAddClassesInPackageByFile: 以文件的形式来获取包下的所有Class. <br/>
-	 *
-	 * @author Mr.Lee
-	 * @param packageName 
-	 * @param packagePath 
-	 * @param recursive 
-	 * @param classes 
-	 */ 
+	/**
+	 * @MethodName: findAndAddClassesInPackageByFile
+	 * @description: 以文件的形式来获取包下的所有Class
+	 * @modifyDate: 2017/4/14 + 下午2:01
+	 * @author: mr.lee
+	 * @param
+	 * @param packageName
+	 * @param packagePath
+	 * @param recursive
+	 * @param classes
+	 */
 	public static void findAndAddClassesInPackageByFile(String packageName,
 			String packagePath, final boolean recursive, Set<Class<?>> classes) {
 		// 获取此包的目录 建立一个File
