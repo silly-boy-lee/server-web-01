@@ -22,15 +22,15 @@ public class AppUtil{
 	 * logger:
 	 */ 
 	protected static Logger logger = Logger.getLogger(AppUtil.class);
-	 
+
 	/** 
-	 * returnObject: 返回接口请求结果 . <br/>
-	 *
-	 * @author Mr.Lee
-	 * @param pd 
-	 * @param map 
-	 * @return Object
-	 */ 
+	 * @MethodName: returnObject
+	 * @description: 返回接口请求结果
+	 * @modifyDate: 2017/4/14 + 下午1:29
+	 * @author: mr.lee
+	 * @param pd
+	 * @param map
+	 */
 	@SuppressWarnings("rawtypes")
 	public static Object returnObject(PageData pd, Map map){
 		if(pd.containsKey("callback")){
