@@ -1,21 +1,22 @@
-package com.cmsg.util;
+package com.xykj.manage.common.util;
 
 import java.util.Map;
 
+import com.xykj.manage.common.pageVo.PageData;
 import org.apache.log4j.Logger;
 
-import com.cmsg.pagebean.PageData;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 
 /** 
  * ClassName: AppUtil <br/> 
- * Function: 接口参cxvxcvczx数校验 <br/>
+ * Function: 接口参数校验 <br/>
  * date: 2016年10月9日 下午4:25:11 <br/> 
  * 
  * @author Mr.Lee 
  * @version  
- */ 
-public class AppUtil  {
+ */
+@SuppressWarnings("unused")
+public class AppUtil{
 	
 	/** 
 	 * logger:
