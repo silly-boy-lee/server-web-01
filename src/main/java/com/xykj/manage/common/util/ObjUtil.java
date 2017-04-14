@@ -1,4 +1,4 @@
-package com.cmsg.util;
+package com.xykj.manage.common.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;

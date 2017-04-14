@@ -1,4 +1,4 @@
-package com.cmsg.util;
+package com.xykj.manage.common.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
