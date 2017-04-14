@@ -1,4 +1,4 @@
-package com.cmsg.util;
+package com.xykj.manage.common.util;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
@@ -9,27 +9,28 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-/** 
- * ClassName: BeanToMapUtil <br/> 
- * Function: java bean与map对象相互转换工具类 <br/> 
- * date: 2016年9月26日 下午1:29:44 <br/> 
- * 
- * @author Mr.Lee 
- * @version  
- */ 
+
+/**
+ * @ClassName: BeanToMapUtil
+ * @description: java bean与map对象相互转换工具类
+ * @modifyDate: 2017/4/14 + 下午1:45
+ * @author: mr.lee
+ */
+@SuppressWarnings("unused")
 public class BeanToMapUtil {
 
 	/**
-	 * convertMap: 将map转换成java bean. <br/>
-	 * 
-	 * @author Mr.Lee
-	 * @param type java bean的类型
-	 * @param map 待转换的map
-	 * @return 返回转换后的java bean
-	 * @throws IntrospectionException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 * @throws InvocationTargetException 
+	 * @MethodName: convertMap
+	 * @description: 将map对象转找成对应类型的java bean对象
+	 * @modifyDate: 2017/4/14 + 下午1:46
+	 * @author: mr.lee
+	 * @param type java bean 类型
+	 * @param map 待转换的map对象
+	 * @throws IntrospectionException
+	 * @throws IllegalAccessException
+	 * @throws InstantiationException
+	 * @throws InvocationTargetException
+	 * @return Object 返回bean实例
 	 */
 	public static Object convertMap(Class<?> type, Map<String, Object> map)
 			throws IntrospectionException, IllegalAccessException,
@@ -59,17 +60,17 @@ public class BeanToMapUtil {
 		return obj;
 	}
 
-	/** 
-	 * transBean2Map:将bean转换成map . <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: transBean2Map
+	 * @description: 将bean转换成map
+	 * @modifyDate: 2017/4/14 + 下午1:55
+	 * @author: mr.lee
 	 * @param obj  待转换的java bean
 	 * @param notNull notNull true:表示只对bean中属性值不为空的属性进行转换，false:对bean中的所有属性进行转换
 	 * @return 返回生成的map
-	 */ 
+	 */
 	public static Map<String, Object> transBean2Map(Object obj,boolean notNull) {  
-		  
-        if(obj == null){  
+        if(obj == null){
             return null;  
         }          
         Map<String, Object> map = new HashMap<String, Object>();  
