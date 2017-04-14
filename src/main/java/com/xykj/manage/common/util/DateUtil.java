@@ -1,19 +1,19 @@
-package com.cmsg.util;
+package com.xykj.manage.common.util;
 
+import java.lang.management.MemoryManagerMXBean;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
  
-/** 
- * ClassName: DateUtil <br/> 
- * Function: 日期处理 <br/> 
- * date: 2016年10月9日 下午5:24:36 <br/> 
- * 
- * @author Mr.Lee 
- * @version  
- */ 
+/**
+ * @ClassName: DateUtil
+ * @description: 日期格式化工具类
+ * @modifyDate: 2017/4/14 + 下午2:03
+ * @author: mr.lee
+ */
+@SuppressWarnings("unused")
 public class DateUtil {
 	
 	/** 
@@ -37,65 +37,71 @@ public class DateUtil {
 	 */ 
 	private final static SimpleDateFormat sdfTimes = new SimpleDateFormat("yyyyMMddHHmmss");
 
-	/** 
-	 * getSdfTimes: 获取yyyyMMddHHmmss格式的日期字符串. <br/>
-	 *
-	 * @author Mr.Lee
+
+	/**
+	 * @MethodName: getSdfTimes
+	 * @description: 获取yyyyMMddHHmmss格式的日期字符串
+	 * @modifyDate: 2017/4/14 + 下午2:04
+	 * @author: mr.lee
 	 * @return 返回yyyyMMddHHmmss格式的日期字符串
-	 */ 
+	 */
 	public static String getSdfTimes() {
 		return sdfTimes.format(new Date());
 	}
-	
-	 
-	/** 
-	 * getYear: 获取yyyy格式的日期字符串. <br/>
-	 *
-	 * @author Mr.Lee
-	 * @return 返回yyyy格式的日期字符串
-	 */ 
+
+	/**
+	 * @MethodName: getYear
+	 * @description: 获取yyyy格式的日期字符串
+	 * @modifyDate: 2017/4/14 + 下午2:05
+	 * @author: mr.lee
+	 * @param @return 返回yyyy格式的日期字符串
+	 */
 	public static String getYear() {
 		return sdfYear.format(new Date());
 	}
 
-	/** 
-	 * getDay: 获取yyyy-MM-dd格式的日期字符串. <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: getDay
+	 * @description: 获取yyyy-MM-dd格式的日期字符串
+	 * @modifyDate: 2017/4/14 + 下午2:06
+	 * @author: mr.lee
 	 * @return 返回yyyy-MM-dd格式的日期字符串
-	 */ 
+	 */
 	public static String getDay() {
 		return sdfDay.format(new Date());
 	}
 	
-	/** 
-	 * getDays: 获取YYYYMMDD格式的日期字符串. <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: getDays
+	 * @description: 获取YYYYMMDD格式的日期字符串
+	 * @modifyDate: 2017/4/14 + 下午2:07
+	 * @author: mr.lee
 	 * @return 返回YYYYMMDD格式的日期字符串
-	 */ 
+	 */
 	public static String getDays(){
 		return sdfDays.format(new Date());
 	}
 
-	/** 
-	 * getTime: 获取YYYY-MM-DD HH:mm:ss格式的日期字符串. <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: getTime
+	 * @description: 获取YYYY-MM-DD HH:mm:ss格式的日期字符串
+	 * @modifyDate: 2017/4/14 + 下午2:08
+	 * @author: mr.lee
 	 * @return 返回YYYY-MM-DD HH:mm:ss格式的日期字符串
-	 */ 
+	 */
 	public static String getTime() {
 		return sdfTime.format(new Date());
 	}
 
-	/** 
-	 * compareDate: 比较两个日期字符串的大小. <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: compareDate
+	 * @description: 比较两个日期字符串的大小
+	 * @modifyDate: 2017/4/14 + 下午2:09
+	 * @author: mr.lee
 	 * @param s 起始日期
 	 * @param e 结束日期
 	 * @return 如果s>=e 返回true 否则返回false
-	 */ 
+	 */
 	public static boolean compareDate(String s, String e) {
 		if(fomatDate(s)==null||fomatDate(e)==null){
 			return false;
@@ -103,13 +109,14 @@ public class DateUtil {
 		return fomatDate(s).getTime() >=fomatDate(e).getTime();
 	}
 
-	/** 
-	 * fomatDate: 格式化日期. <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: fomatDate
+	 * @description: 格式化日期
+	 * @modifyDate: 2017/4/14 + 下午2:09
+	 * @author: mr.lee
 	 * @param date 日期字符串
 	 * @return 返回格式化好的日期字符串
-	 */ 
+	 */
 	public static Date fomatDate(String date) {
 		DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		try {
@@ -120,13 +127,14 @@ public class DateUtil {
 		}
 	}
 
-	/** 
-	 * isValidDate: 校验日期是否合法. <br/>
-	 *
-	 * @author Mr.Lee
+	/**
+	 * @MethodName: isValidDate
+	 * @description: 校验日期是否合法
+	 * @modifyDate: 2017/4/14 + 下午2:10
+	 * @author: mr.lee
 	 * @param s 日期字符串
 	 * @return true 合法，false 不合法
-	 */ 
+	 */
 	public static boolean isValidDate(String s) {
 		DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		try {
@@ -137,15 +145,16 @@ public class DateUtil {
 			return false;
 		}
 	}
-	
-	/** 
-	 * getDiffYear: 计算两个日期时间之间的年数. <br/>
-	 *
-	 * @author Mr.Lee
+
+	/**
+	 * @MethodName:  getDiffYear
+	 * @description: 计算两个日期时间之间的年数
+	 * @modifyDate: 2017/4/14 + 下午2:11
+	 * @author: mr.lee
 	 * @param startTime 起始时间
 	 * @param endTime 结束时间
 	 * @return 返回相隔的天数
-	 */ 
+	 */
 	public static int getDiffYear(String startTime,String endTime) {
 		DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		try {
@@ -155,15 +164,16 @@ public class DateUtil {
 			return 0;
 		}
 	}
-	 
-    /** 
-     * getDaySub: 计算两个时间之间的天数. <br/>
-     *
-     * @author Mr.Lee
+
+    /**
+     * @MethodName: getDaySub
+     * @description: 计算两个时间之间的天数
+     * @modifyDate: 2017/4/14 + 下午2:12
+     * @author: mr.lee
      * @param beginDateStr 起始时间
-     * @param endDateStr 结束时间
-     * @return 返回相隔的天数
-     */ 
+	 * @param endDateStr 结束时间
+	 * @return 返回相隔的天数
+     */
     public static long getDaySub(String beginDateStr,String endDateStr){
         long day=0;
         java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");
@@ -181,14 +191,15 @@ public class DateUtil {
       
         return day;
     }
-    
-    /** 
-     * getAfterDayDate: 得到n天之后的日期. <br/>
-     *
-     * @author Mr.Lee
+
+    /**
+     * @MethodName:  getAfterDayDate
+     * @description: 得到n天之后的日期
+     * @modifyDate: 2017/4/14 + 下午2:12
+     * @author: mr.lee
      * @param days n天
-     * @return 返回n天之后的日期
-     */ 
+	 * @return 返回n天之后的日期
+     */
     public static String getAfterDayDate(String days) {
     	int daysInt = Integer.parseInt(days);
     	
@@ -201,14 +212,16 @@ public class DateUtil {
         
         return dateStr;
     }
-    
-    /** 
-     * getAfterDayWeek: 得到n天之后是周几. <br/>
-     *
+
+    /**
+     * @MethodName: getAfterDayWeek
+     * @description: 得到n天之后是周几
+     * @modifyDate: 2017/4/14 + 下午2:13
+     * @author: mr.lee
      * @author Mr.Lee
-     * @param days n天
-     * @return 周几
-     */ 
+	 * @param days n天
+	 * @return 周几
+     */
     public static String getAfterDayWeek(String days) {
     	int daysInt = Integer.parseInt(days);
     	//java.util包
@@ -220,16 +233,4 @@ public class DateUtil {
         String dateStr = sdf.format(date);
         return dateStr;
     }
-    
-    /** 
-     * main: 测试方法. <br/>
-     *
-     * @author Mr.Lee
-     * @param args 方法参数列表
-     */ 
-    public static void main(String[] args) {
-    	System.out.println(getDays());
-    	System.out.println(getAfterDayWeek("3"));
-    }
-
 }
